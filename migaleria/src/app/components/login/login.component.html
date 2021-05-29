@@ -1,0 +1,94 @@
+<!-- <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Ingresar</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+  
+  <!-- <ion-content>
+    <form [formGroup]="formLogin">
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" required formControlName="email"></ion-input>
+      </ion-item>
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" required formControlName="password"></ion-input>
+      </ion-item>
+  
+      <ion-row>
+        <ion-col>
+          <ion-button type="button" color="primary" expand="block" (click)="loguearse()">iniciar sesión</ion-button>
+          <ion-button type="button" color="success" expand="block" (click)="testUser()">test</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-content> -->
+
+<ion-content fullscreen>
+  <div class="main-container">
+    <div class="form-container">
+
+        <!-- <div class="srouce"><a title="Learn How to create Beautiful HTML & CSS login page template" href="https://www.w3jar.com/beautiful-html-css-login-page-template/">W3jar.Com</a></div> -->
+
+        <div class="form-body">
+            <h2 class="title">Iniciar sesión</h2>
+            <div class="social-login">
+                <ul>
+                    <li class="google"><img style="margin-left: 50px;" src="../../../assets/camera-ico.png" alt="" width="200px" height="200px"></li>
+                    
+                </ul>
+            </div><!-- SOCIAL LOGIN -->
+
+            <!-- <div class="_or">or</div> -->
+
+            <form class="the-form"  [formGroup]="formLogin">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="ejemeplo@ejemplo.com" formControlName="email">
+
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Ingresa la contraseña" formControlName="password">
+
+                <input type="submit" (click)="loguearse()" value="Ingresar">
+
+            </form>
+
+        </div><!-- FORM BODY-->
+        <section>
+          <ion-fab horizontal="end" vertical="top" slot="fixed">
+            <ion-fab-button>
+              <fa-icon [icon]="faUsers"></fa-icon>
+            </ion-fab-button>
+            <ion-fab-list>
+              <ion-fab-button color="light" (click)='setFormulario("admin@admin.com")'>
+                <fa-icon [icon]="faUserTie" ></fa-icon>
+              </ion-fab-button>
+              <ion-fab-button color="light" (click)='setFormulario("anonimo@anonimo.com")'>
+                <fa-icon [icon]="faUserSecret"></fa-icon>
+              </ion-fab-button>
+              <ion-fab-button color="light" (click)='setFormulario("usuario@usuario.com")'>
+                <fa-icon [icon]="faUser"></fa-icon>
+              </ion-fab-button>
+              <ion-fab-button color="light" (click)='setFormulario("tester@tester.com")'>
+                <fa-icon [icon]=" faUsersCog"></fa-icon>
+              </ion-fab-button>
+              <ion-fab-button color="light" (click)='setFormulario("invitado@invitado.com")'>
+                <fa-icon [icon]="faUserPlus"></fa-icon>
+              </ion-fab-button>
+            </ion-fab-list>
+          </ion-fab>
+        </section>
+        <!-- <div class="form-footer">
+            <div>
+                <span>Don't have an account?</span> <a href="">Sign Up</a>
+            </div>
+        </div> --><!-- FORM FOOTER -->
+
+    </div><!-- FORM CONTAINER -->
+</div>
+
+</ion-content>

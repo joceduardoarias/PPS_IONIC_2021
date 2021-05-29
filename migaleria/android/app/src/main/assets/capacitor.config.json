@@ -1,0 +1,9 @@
+{
+  "appId": "io.ionic.miGaleria",
+  "appName": "migaleria",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {},
+  "cordova": {}
+}

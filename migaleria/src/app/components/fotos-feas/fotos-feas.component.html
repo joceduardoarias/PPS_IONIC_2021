@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+	  <ion-title style="text-align: center;">
+		Fotos Feas
+	  </ion-title>
+	  <ion-buttons slot="end"  (click)="salir()">
+		<ion-button>
+		  <ion-fab-button>
+			<fa-icon [icon]="faSignOutAlt"></fa-icon>
+		  </ion-fab-button>
+		</ion-button>
+	  </ion-buttons>
+	</ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">   
+	  <ion-card *ngFor="let foto of fotos; index as position">
+		<img *ngIf="foto.tipo == 'fea'"  [src]="foto.urlFoto"/>
+		<ion-card-header>
+		  <ion-card-subtitle>{{foto.email}}</ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+		  <ion-grid>
+			<ion-row>
+			<ion-col>
+			  <ion-button (click)="meGusta(foto)">        
+				<ion-icon name="thumbs-down-outline"></ion-icon>
+				({{foto.conatdorFea}})
+			  </ion-button>
+			</ion-col>
+			<ion-col>
+			</ion-col>
+			<ion-col>            
+			</ion-col>
+			<ion-col>            
+			</ion-col>
+		  </ion-row>
+		  </ion-grid>                                           
+		</ion-card-content>
+	  </ion-card>
+	<!-- botón cámara -->
+	<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+	  <ion-fab-button (click)="nuevaFoto('fea')">
+		<ion-icon name="camera"></ion-icon>
+	  </ion-fab-button>
+	</ion-fab>  
+  </ion-content>
+  
+  

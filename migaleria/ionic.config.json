@@ -1,0 +1,8 @@
+{
+  "name": "migaleria",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
